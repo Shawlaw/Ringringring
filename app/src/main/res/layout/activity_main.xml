@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btnSelectFile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="选择文件"
+        app:layout_constraintBottom_toTopOf="@+id/tvSelectedFile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnSetRing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="设置铃声"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cbPhoneRing" />
+
+    <TextView
+        android:id="@+id/tvSelectedFile"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="已选文件："
+        app:layout_constraintBottom_toTopOf="@+id/cbPhoneRing"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSelectFile" />
+
+    <CheckBox
+        android:id="@+id/cbAlarmRing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="闹钟铃声"
+        app:layout_constraintBottom_toBottomOf="@+id/cbNotificationRing"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/cbNotificationRing"
+        app:layout_constraintTop_toTopOf="@+id/cbNotificationRing" />
+
+    <CheckBox
+        android:id="@+id/cbNotificationRing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="通知铃声"
+        app:layout_constraintBottom_toBottomOf="@+id/cbMsgRing"
+        app:layout_constraintEnd_toStartOf="@+id/cbAlarmRing"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/cbMsgRing"
+        app:layout_constraintTop_toTopOf="@+id/cbMsgRing" />
+
+    <CheckBox
+        android:id="@+id/cbMsgRing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="短信铃声"
+        app:layout_constraintBottom_toBottomOf="@+id/cbPhoneRing"
+        app:layout_constraintEnd_toStartOf="@+id/cbNotificationRing"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/cbPhoneRing"
+        app:layout_constraintTop_toTopOf="@+id/cbPhoneRing" />
+
+    <CheckBox
+        android:id="@+id/cbPhoneRing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="来电铃声"
+        app:layout_constraintBottom_toTopOf="@+id/btnSetRing"
+        app:layout_constraintEnd_toStartOf="@+id/cbMsgRing"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSelectedFile" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
